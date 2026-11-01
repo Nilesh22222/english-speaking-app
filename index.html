@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speak English – Practice App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>🗣️ Speak English</h1>
+    <p class="sub">Listen, repeat, and get instant feedback on your pronunciation.</p>
+
+    <div class="row">
+      <label for="level">Level</label>
+      <select id="level">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+      <label for="accent">Accent</label>
+      <select id="accent">
+        <option value="en-US">US</option>
+        <option value="en-GB">UK</option>
+        <option value="en-IN">India</option>
+      </select>
+    </div>
+
+    <section class="card">
+      <p id="sentence" class="sentence"></p>
+      <p id="hint" class="hint"></p>
+      <div class="row">
+        <button id="listen">🔊 Listen</button>
+        <button id="speak" class="primary">🎤 Speak</button>
+        <button id="next">Next ➜</button>
+      </div>
+      <p id="status" class="status"></p>
+      <div id="result" class="result" hidden>
+        <p id="heard"></p>
+        <p id="words" class="words"></p>
+        <p id="score" class="score"></p>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><b id="attempts">0</b><span>Attempts</span></div>
+      <div><b id="best">0%</b><span>Best score</span></div>
+      <div><b id="streak">0</b><span>Streak (80%+)</span></div>
+    </section>
+
+    <p id="unsupported" class="warn" hidden>
+      Speech recognition is not supported in this browser. Please use Google Chrome or Microsoft Edge.
+    </p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
